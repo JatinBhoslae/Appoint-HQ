@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Star, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { API_URL } from '../config';
-import { Button } from './ui/button';
+import Button from '../components/ui/button';
 import { Card } from './ui/card';
 import { cn } from '../lib/utils';
 

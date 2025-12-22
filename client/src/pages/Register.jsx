@@ -5,7 +5,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import { User, Mail, Lock, UserCircle2, Phone, Calendar, ArrowRight } from 'lucide-react';
 import { API_URL } from '../config';
-import Button from '../components/ui/Button';
+import Button from '../components/ui/button';
 import Card from '../components/ui/Card';
 import { Input } from '../components/ui/input';
 
@@ -106,7 +106,7 @@ const Register = () => {
                 <label className="text-sm font-medium text-muted-foreground ml-1">Full Name</label>
                 <Input
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="Rahul Sharma"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required

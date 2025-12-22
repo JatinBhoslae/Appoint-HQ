@@ -4,7 +4,7 @@ import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Loader2, AlertCircle, KeyRound, ArrowRight } from 'lucide-react';
 import { API_URL } from '../config';
-import Button from '../components/ui/Button';
+import Button from '../components/ui/button';
 import Card from '../components/ui/Card';
 
 const SignupOTP = () => {

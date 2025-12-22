@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles, CheckCircle2, PlayCircle } from 'lucide-react';
-import { Button } from './ui/button';
+import Button from '../components/ui/button';
 import { BackgroundBeams } from './ui/background-beams';
 
 const Hero = () => {

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, Loader2, AlertCircle, CheckCircle, KeyRound, ArrowLeft, ArrowRight } from 'lucide-react';
 import { API_URL } from '../config';
-import Button from '../components/ui/Button';
+import Button from '../components/ui/button';
 import Card from '../components/ui/Card';
 
 const ResetPasswordOTP = () => {
