@@ -109,7 +109,7 @@ const ServiceList = ({ onEdit }) => {
                             </div>
 
                             <div className="mb-6">
-                                <h3 className="font-bold text-xl text-white mb-2 pr-20 line-clamp-1" title={service.name}>
+                                <h3 className="font-bold text-xl text-card-foreground mb-2 pr-20 line-clamp-1" title={service.name}>
                                     {service.name}
                                 </h3>
                                 <p className="text-sm text-muted-foreground line-clamp-2 h-10">

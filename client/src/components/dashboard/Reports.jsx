@@ -105,7 +105,7 @@ const Reports = () => {
     return (
         <div className="space-y-6">
             {/* Key Metrics */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 {[
                     { label: 'Total Appointments', value: metrics.total, sub: 'All time bookings', icon: Users, color: 'text-blue-500', bg: 'bg-blue-500/10' },
                     { label: 'Est. Revenue', value: `₹${metrics.revenue}`, sub: 'From confirmed bookings', icon: DollarSign, color: 'text-green-500', bg: 'bg-green-500/10' },
@@ -117,7 +117,7 @@ const Reports = () => {
                             <div className="flex justify-between items-start mb-4">
                                 <div>
                                     <p className="text-sm font-medium text-muted-foreground">{item.label}</p>
-                                    <h3 className="text-2xl font-bold text-white mt-1">{item.value}</h3>
+                                    <h3 className="text-2xl font-bold text-foreground mt-1">{item.value}</h3>
                                 </div>
                                 <div className={cn("p-2 rounded-lg", item.bg)}>
                                     <item.icon className={cn("h-5 w-5", item.color)} />
@@ -130,15 +130,15 @@ const Reports = () => {
             </div>
 
             {/* Charts */}
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
                 <Card className="bg-card/40 backdrop-blur-md border-white/10 p-6">
-                    <h3 className="text-lg font-bold text-white mb-6">Bookings by Day of Week</h3>
-                    <div className="h-[300px] w-full">
+                    <h3 className="text-lg font-bold text-foreground mb-6">Bookings by Day of Week</h3>
+                    <div className="h-[250px] md:h-[300px] w-full">
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={chartData}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" vertical={false} />
-                                <XAxis dataKey="name" stroke="#888888" fontSize={12} tickLine={false} axisLine={false} />
-                                <YAxis stroke="#888888" fontSize={12} tickLine={false} axisLine={false} allowDecimals={false} />
+                                <XAxis dataKey="name" stroke="#888888" fontSize={10} md:fontSize={12} tickLine={false} axisLine={false} />
+                                <YAxis stroke="#888888" fontSize={10} md:fontSize={12} tickLine={false} axisLine={false} allowDecimals={false} />
                                 <Tooltip
                                     contentStyle={{ backgroundColor: '#1e293b', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px', color: '#fff' }}
                                     cursor={{ fill: 'rgba(255,255,255,0.05)' }}
@@ -150,8 +150,8 @@ const Reports = () => {
                 </Card>
 
                 <Card containerClassName="bg-card/40 backdrop-blur-md border-white/10" className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-6">Booking Status Distribution</h3>
-                    <div className="h-[300px] w-full">
+                    <h3 className="text-lg font-bold text-foreground mb-6">Booking Status Distribution</h3>
+                    <div className="h-[250px] md:h-[300px] w-full">
                         <ResponsiveContainer width="100%" height="100%">
                             <PieChart>
                                 <Pie

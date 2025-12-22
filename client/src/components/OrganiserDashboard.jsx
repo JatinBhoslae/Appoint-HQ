@@ -136,16 +136,16 @@ const OrganiserDashboard = () => {
       animate={{ opacity: 1 }}
     >
       {/* Header */}
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-extrabold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+          <h1 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Organizer Dashboard
           </h1>
           <p className="text-muted-foreground">Manage services & check-ins</p>
         </div>
 
         {activeTab === 'services' && !showCreateForm && !editingService && (
-          <button onClick={() => setShowCreateForm(true)} className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors flex items-center gap-2">
+          <button onClick={() => setShowCreateForm(true)} className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors flex items-center gap-2 w-full md:w-auto justify-center">
             <Plus className="h-4 w-4" /> Create Service
           </button>
         )}
@@ -189,7 +189,7 @@ const OrganiserDashboard = () => {
 
       {/* Tabs */}
       <div className="space-y-6">
-        <div className="flex space-x-1 border-b border-border">
+        <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-1 border-b border-border">
           {['overview', 'services', 'calendar', 'reports'].map((tab) => (
             <button
               key={tab}
@@ -220,7 +220,7 @@ const OrganiserDashboard = () => {
                 </div>
               </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <div className="bg-card rounded-lg border border-border shadow-sm p-6">
                 <div className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <h3 className="text-sm font-medium text-card-foreground">Total Appointments</h3>

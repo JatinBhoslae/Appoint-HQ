@@ -157,10 +157,10 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
     };
 
     return (
-        <Card className="bg-card/40 backdrop-blur-md border-white/10 p-6 max-w-4xl mx-auto">
+        <Card className="bg-card/40 backdrop-blur-md border-white/10 p-4 md:p-6 max-w-4xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="flex justify-between items-center border-b border-white/10 pb-4">
-                    <h2 className="text-2xl font-bold text-white">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/10 pb-4">
+                    <h2 className="text-xl md:text-2xl font-bold text-foreground">
                         {serviceToEdit ? 'Edit Service' : 'Create New Service'}
                     </h2>
                     <Button variant="ghost" onClick={onCancel} size="icon" className="hover:bg-white/10">
@@ -168,10 +168,10 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                     </Button>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                     {/* Left Column: Basic Info */}
                     <div className="space-y-6">
-                        <h3 className="font-semibold text-lg pb-1 border-b border-white/10 text-white flex items-center gap-2">
+                        <h3 className="font-semibold text-lg pb-1 border-b border-white/10 text-foreground flex items-center gap-2">
                             <FileText className="w-5 h-5 text-primary" />
                             Basic Information
                         </h3>
@@ -228,7 +228,7 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                             <Textarea value={formData.description} onChange={e => handleChange('description', e.target.value)} placeholder="Describe the service..." />
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <Label>Duration (min)</Label>
                                 <Input 
@@ -254,13 +254,13 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
 
                     {/* Right Column: Pricing & Rules */}
                     <div className="space-y-6">
-                        <h3 className="font-semibold text-lg pb-1 border-b border-white/10 text-white flex items-center gap-2">
+                        <h3 className="font-semibold text-lg pb-1 border-b border-white/10 text-foreground flex items-center gap-2">
                             <DollarSign className="w-5 h-5 text-primary" />
                             Pricing & Rules
                         </h3>
 
                         <div className="border border-white/10 rounded-xl p-4 bg-white/5 space-y-4">
-                            <h4 className="font-medium text-sm text-white">Pricing Configuration</h4>
+                            <h4 className="font-medium text-sm text-foreground">Pricing Configuration</h4>
 
                             <div className="space-y-2">
                                 <Label>Model</Label>
@@ -270,7 +270,7 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                                 </Select>
                             </div>
 
-                            <div className="grid grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <Label>Base Fee (₹)</Label>
                                     <Input 
@@ -324,7 +324,7 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                                     onCheckedChange={c => handleChange('isPublished', c)}
                                     className="data-[state=checked]:bg-green-500"
                                 />
-                                <Label htmlFor="published" className="mb-0 cursor-pointer !text-white">Publish Service (Public)</Label>
+                                <Label htmlFor="published" className="mb-0 cursor-pointer text-foreground">Publish Service (Public)</Label>
                             </div>
                             <div className="flex items-center space-x-3 bg-white/5 p-3 rounded-xl">
                                 <Switch
@@ -332,7 +332,7 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                                     checked={formData.manualConfirmation}
                                     onCheckedChange={c => handleChange('manualConfirmation', c)}
                                 />
-                                <Label htmlFor="manual" className="mb-0 cursor-pointer !text-white">Requires Manual Confirmation</Label>
+                                <Label htmlFor="manual" className="mb-0 cursor-pointer text-foreground">Requires Manual Confirmation</Label>
                             </div>
                             <div className="flex items-center space-x-3 bg-white/5 p-3 rounded-xl">
                                 <Switch
@@ -340,13 +340,13 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                                     checked={formData.advancePayment}
                                     onCheckedChange={c => handleChange('advancePayment', c)}
                                 />
-                                <Label htmlFor="advance" className="mb-0 cursor-pointer !text-white">Requires Advance Payment</Label>
+                                <Label htmlFor="advance" className="mb-0 cursor-pointer text-foreground">Requires Advance Payment</Label>
                             </div>
                         </div>
 
                         {/* Booking Questions Section */}
                         <div className="border border-white/10 rounded-xl p-4 bg-white/5 space-y-4">
-                            <h4 className="font-medium text-sm text-white flex items-center gap-2">
+                            <h4 className="font-medium text-sm text-foreground flex items-center gap-2">
                                 <FileText className="w-4 h-4 text-primary" />
                                 Custom Booking Questions
                             </h4>
@@ -388,14 +388,14 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                 </div>
 
                 <div className="border-t border-white/10 pt-6">
-                    <h3 className="font-semibold text-lg mb-4 text-white flex items-center gap-2">
+                    <h3 className="font-semibold text-lg mb-4 text-foreground flex items-center gap-2">
                         <CalendarIcon className="w-5 h-5 text-primary" />
                         Availability Schedule
                     </h3>
                     <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
                         {formData.availability.map((slot, index) => (
                             <div key={slot.day} className="flex items-center gap-4 p-3 border border-white/10 rounded-xl bg-white/5">
-                                <div className="w-24 font-medium text-white">{slot.day}</div>
+                                <div className="w-24 font-medium text-foreground">{slot.day}</div>
                                 <Switch
                                     checked={slot.isActive}
                                     onCheckedChange={c => handleAvailabilityChange(index, 'isActive', c)}
@@ -424,9 +424,9 @@ const ServiceForm = ({ serviceToEdit, onSuccess, onCancel }) => {
                     </div>
                 </div>
 
-                <div className="flex justify-end gap-4 pt-4 border-t border-white/10 sticky bottom-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 p-4 -mx-6 -mb-6 rounded-b-lg z-10">
-                    <Button variant="ghost" onClick={onCancel} className="hover:bg-white/10">Cancel</Button>
-                    <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground">Save Service</Button>
+                <div className="flex flex-col-reverse md:flex-row justify-end gap-4 pt-4 border-t border-white/10 sticky bottom-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 p-4 -mx-4 md:-mx-6 -mb-6 rounded-b-lg z-10">
+                    <Button variant="ghost" onClick={onCancel} className="hover:bg-white/10 w-full md:w-auto">Cancel</Button>
+                    <Button type="submit" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full md:w-auto">Save Service</Button>
                 </div>
             </form>
         </Card>

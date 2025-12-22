@@ -142,20 +142,20 @@ const CustomerDashboard = () => {
       >
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-extrabold bg-gradient-to-r from-primary via-purple-500 to-secondary bg-clip-text text-transparent">
             Customer Dashboard
           </h1>
-          <p className="text-muted-foreground mt-2 text-lg">
+          <p className="text-muted-foreground mt-2 text-base md:text-lg">
             Welcome back, <span className="text-foreground font-semibold">{userName}</span>
           </p>
         </motion.div>
 
         {/* Services Section */}
         <motion.section variants={containerVariants} className="space-y-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 bg-card/30 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg">
-            <motion.h2 variants={itemVariants} className="text-2xl font-bold flex items-center gap-2 text-white">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 bg-card/30 backdrop-blur-md p-4 md:p-6 rounded-2xl border border-white/10 shadow-lg">
+            <motion.h2 variants={itemVariants} className="text-xl md:text-2xl font-bold flex items-center gap-2 text-foreground">
               <div className="p-2 bg-primary/10 rounded-lg">
-                <Search className="h-6 w-6 text-primary" />
+                <Search className="h-5 md:h-6 w-5 md:w-6 text-primary" />
               </div>
               Available Services
             </motion.h2>
@@ -184,7 +184,7 @@ const CustomerDashboard = () => {
                     key={type}
                     onClick={() => setSelectedServiceType(type)}
                     className={`
-                      relative px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
+                      relative px-4 py-2 md:px-6 rounded-full text-xs md:text-sm font-medium transition-all duration-300
                       ${selectedServiceType === type
                         ? 'bg-primary text-primary-foreground shadow-[0_0_20px_rgba(var(--primary),0.5)] scale-105'
                         : 'bg-card/50 text-muted-foreground hover:bg-card hover:text-foreground border border-white/10'
@@ -202,7 +202,7 @@ const CustomerDashboard = () => {
               <button
                 onClick={() => setSelectedCategory('All')}
                 className={`
-                  whitespace-nowrap px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
+                  whitespace-nowrap px-4 py-2 md:px-6 rounded-full text-xs md:text-sm font-medium transition-all duration-300
                   ${selectedCategory === 'All'
                     ? 'bg-secondary text-secondary-foreground shadow-[0_0_20px_rgba(var(--secondary),0.5)] scale-105'
                     : 'bg-card/50 text-muted-foreground hover:bg-card hover:text-foreground border border-white/10'
@@ -216,7 +216,7 @@ const CustomerDashboard = () => {
                   key={cat._id}
                   onClick={() => setSelectedCategory(cat._id)}
                   className={`
-                    whitespace-nowrap px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
+                    whitespace-nowrap px-4 py-2 md:px-6 rounded-full text-xs md:text-sm font-medium transition-all duration-300
                     ${selectedCategory === cat._id
                       ? 'bg-secondary text-secondary-foreground shadow-[0_0_20px_rgba(var(--secondary),0.5)] scale-105'
                       : 'bg-card/50 text-muted-foreground hover:bg-card hover:text-foreground border border-white/10'
@@ -230,7 +230,7 @@ const CustomerDashboard = () => {
           </motion.div>
 
           {/* Service Cards Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <AnimatePresence mode='popLayout'>
               {filteredServices.map(service => (
                 <motion.div
@@ -241,12 +241,12 @@ const CustomerDashboard = () => {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <Card containerClassName="bg-card/40 backdrop-blur-md border-white/10 hover:border-primary/50 transition-colors group overflow-hidden" className="h-full flex flex-col h-full">
+                  <Card containerClassName="bg-card/60 backdrop-blur-md border-white/10 hover:border-primary/50 transition-colors group overflow-hidden" className="h-full flex flex-col h-full">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
                     <div className="p-6 border-b border-white/5 relative z-10">
                       <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                        <h3 className="text-xl font-bold text-card-foreground group-hover:text-primary transition-colors">
                           {service?.name}
                         </h3>
                         <span className="px-2 py-1 rounded-md bg-primary/10 text-primary text-xs font-medium border border-primary/20">
@@ -311,7 +311,7 @@ const CustomerDashboard = () => {
             <div className="p-2 bg-primary/10 rounded-lg">
               <Calendar className="h-6 w-6 text-primary" />
             </div>
-            <h2 className="text-2xl font-bold text-white">
+            <h2 className="text-2xl font-bold text-foreground">
               Upcoming Appointments
             </h2>
           </div>
@@ -332,13 +332,13 @@ const CustomerDashboard = () => {
               </Button>
             </Card>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {appointments.map(appt => (
                 <motion.div key={appt._id} variants={itemVariants}>
-                  <Card containerClassName="h-full bg-card/40 backdrop-blur-md border-white/10 hover:border-primary/50 transition-all duration-300 group">
+                  <Card containerClassName="h-full bg-card/60 backdrop-blur-md border-white/10 hover:border-primary/50 transition-all duration-300 group">
                     <div className="p-6 border-b border-white/5">
                       <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors">
+                        <h3 className="text-lg font-bold text-card-foreground group-hover:text-primary transition-colors">
                           {appt?.service?.name || 'Service'}
                         </h3>
                         <span className={`
@@ -360,14 +360,14 @@ const CustomerDashboard = () => {
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div className="space-y-1">
                           <p className="text-muted-foreground text-xs uppercase tracking-wider">Time</p>
-                          <p className="font-medium text-white flex items-center gap-1">
+                          <p className="font-medium text-card-foreground flex items-center gap-1">
                             <Clock className="h-3 w-3 text-primary" />
                             {appt.startTime} - {appt.endTime}
                           </p>
                         </div>
                         <div className="space-y-1">
                           <p className="text-muted-foreground text-xs uppercase tracking-wider">Provider</p>
-                          <p className="font-medium text-white truncate">
+                          <p className="font-medium text-card-foreground truncate">
                             {appt?.provider?.name || 'N/A'}
                           </p>
                         </div>
