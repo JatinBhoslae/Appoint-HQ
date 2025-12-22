@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Phone, Loader2, AlertCircle, KeyRound, ArrowRight } from 'lucide-react';
 import { API_URL } from '../config';
 import Button from '../components/ui/button';
-import Card from '../components/ui/Card';
+import Card from '../components/ui/card';
 
 const SignupOTP = () => {
   const [otp, setOtp] = useState('');

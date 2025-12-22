@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, ArrowLeft, AlertCircle, Loader2, Send } from 'lucide-react';
 import { API_URL } from '../config';
 import Button from '../components/ui/button';
-import Card from '../components/ui/Card';
+import Card from '../components/ui/card';
 
 const ForgotPasswordOTP = () => {
   const [email, setEmail] = useState('');

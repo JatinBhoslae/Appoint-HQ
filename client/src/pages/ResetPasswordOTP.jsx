@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, Loader2, AlertCircle, CheckCircle, KeyRound, ArrowLeft, ArrowRight } from 'lucide-react';
 import { API_URL } from '../config';
 import Button from '../components/ui/button';
-import Card from '../components/ui/Card';
+import Card from '../components/ui/card';
 
 const ResetPasswordOTP = () => {
   const [otp, setOtp] = useState('');

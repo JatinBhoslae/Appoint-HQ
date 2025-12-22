@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { User, Mail, Lock, UserCircle2, Phone, Calendar, ArrowRight } from 'lucide-react';
 import { API_URL } from '../config';
 import Button from '../components/ui/button';
-import Card from '../components/ui/Card';
+import Card from '../components/ui/card';
 import { Input } from '../components/ui/input';
 
 const Register = () => {

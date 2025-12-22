@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Loader2, Download, Calendar, Clock, MapPin, User, CheckCircle, AlertCircle, Share2 } from 'lucide-react';
 import { API_URL } from '../config';
 import Button from '../components/ui/button';
-import { Card } from '../components/ui/card';
+import Card from '../components/ui/card';
 
 const TicketView = () => {
   const { id } = useParams();

@@ -6,7 +6,7 @@ import { Mail, Loader2, AlertCircle, KeyRound, CheckCircle, ArrowRight } from 'l
 import { API_URL } from '../config';
 import { useAuth } from '../context/AuthContext';
 import Button from '../components/ui/button';
-import Card from '../components/ui/Card';
+import Card from '../components/ui/card';
 
 const VerifyOTPOtp = () => {
   const [otp, setOtp] = useState('');

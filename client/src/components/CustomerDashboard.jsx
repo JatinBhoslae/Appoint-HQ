@@ -6,7 +6,7 @@ import ReviewForm from './ReviewForm';
 import { QrCode, Calendar, Clock, DollarSign, Search, User, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { API_URL } from '../config';
-import { Card } from './ui/card';
+import Card from './ui/card';
 import Button from '../components/ui/button';
 
 const containerVariants = {
