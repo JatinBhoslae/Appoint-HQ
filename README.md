@@ -1,9 +1,9 @@
- 📅 APPOINTMENT HQ (AppointHQ)
+📅 APPOINTMENT HQ (AppointHQ)
 
 **AppointHQ** is a full-featured, role-based appointment booking and service management web application designed to simplify scheduling for customers, organizers, and administrators. It provides real-time booking, secure authentication, notifications, analytics, and payment integration — all in one modern platform.
 
 🌐 **Live Demo:** https://appoinment-hq-1.onrender.com/  
-💻 **GitHub Repository:** https://github.com/hemantjawale/APPOINMENT_HQ  
+💻 **GitHub Repository:** https://github.com/JatinBhoslae/Appoint-HQ.git
 
 ---
 
@@ -15,15 +15,16 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 
 ## 🧩 User Roles
 
-- **Customer** – Discover services, book appointments, manage bookings, and leave reviews  
-- **Organizer** – Manage services, availability, customers, and appointments  
-- **Admin** – Oversee the platform, manage users, categories, analytics, and configurations  
+- **Customer** – Discover services, book appointments, manage bookings, and leave reviews
+- **Organizer** – Manage services, availability, customers, and appointments
+- **Admin** – Oversee the platform, manage users, categories, analytics, and configurations
 
 ---
 
 ## ✨ Features
 
 ### 🔐 Authentication & User Management
+
 - Multi-role authentication (Customer, Organizer, Admin)
 - Email verification with OTP
 - Secure password reset
@@ -34,6 +35,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 👤 Customer Features
+
 - Service discovery and advanced search
 - Service provider profiles
 - Real-time appointment scheduling
@@ -48,6 +50,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 🧑‍💼 Organizer Features
+
 - Service creation and management
 - Availability and schedule management
 - Appointment management
@@ -59,6 +62,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 🛠 Admin Features
+
 - User management
 - Category & subcategory management
 - System analytics and reports
@@ -69,6 +73,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 📆 Booking & Scheduling
+
 - Real-time availability updates
 - Multi-timezone support
 - Service duration management
@@ -81,6 +86,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 🔔 Notifications
+
 - Email notifications
 - In-app notifications
 - SMS notifications
@@ -91,6 +97,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 💳 Payment Integration
+
 - Secure payment processing
 - Multiple payment methods
 - Refund management
@@ -101,6 +108,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### ⚙️ Technical Features
+
 - Responsive, mobile-friendly design
 - Secure API endpoints
 - Real-time updates
@@ -113,6 +121,7 @@ AppointHQ helps businesses and service providers efficiently manage appointments
 ---
 
 ### 🌟 Additional Features
+
 - Service recommendations
 - Customer feedback system
 - Service images & galleries
@@ -150,3 +159,4 @@ npm install
 # Start the development server
 npm run dev
 # Appoint-HQ
+```
