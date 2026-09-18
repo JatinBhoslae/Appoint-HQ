@@ -1,4 +1,4 @@
-li# 📅 APPOINTMENT HQ (AppointHQ)
+ 📅 APPOINTMENT HQ (AppointHQ)
 
 **AppointHQ** is a full-featured, role-based appointment booking and service management web application designed to simplify scheduling for customers, organizers, and administrators. It provides real-time booking, secure authentication, notifications, analytics, and payment integration — all in one modern platform.
 
